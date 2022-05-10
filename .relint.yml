@@ -1,0 +1,4 @@
+# My marker for temporary debugging
+- name: MLML
+  pattern: '(?i)\bMLML'
+  filePattern: .*

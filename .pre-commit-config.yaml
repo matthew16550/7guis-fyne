@@ -1,0 +1,37 @@
+# https://pre-commit.com
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 38b88246ccc552bffaaf54259d064beeee434539  # v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-yaml
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: trailing-whitespace
+
+  - repo: https://github.com/sirosen/fix-smartquotes
+    rev: 10fa8b01685f82969a29c3a39009478413a10e2d  # 0.2.0
+    hooks:
+      - id: fix-smartquotes
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 512f8d8212239f3686828b929748c4b89cb458ab  # 2.3.5
+    hooks:
+      - id: editorconfig-checker
+
+  - repo: https://github.com/codingjoe/relint
+    rev: 5d272b3fe90c48efd21857c0188d58180ab02876  # 1.2.1
+    hooks:
+      - id: relint
+        types: [ text ]
+        exclude: ^.relint.yml$
